@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap);
+
+*{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    /* outline: none; */
+}
+
+:root{
+   --grey-thick: hsl(0, 0%, 7%);
+   --grey-light:  hsl(0, 0%, 42%);
+   --white:hsl(0, 0%, 100%);
+   --yellow: hsl(47, 88%, 63%);
+   --black:hsl(0, 0%, 1%);
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--yellow);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 15px; */
+
+    .card{
+        background-color: var(--white);
+        flex-direction: column;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 384px;
+        /* height: 522px; */
+        border-radius: 30px;
+        border: 1px solid var(--black);
+        box-shadow: 8px 8px var(--black);
+
+        .imagecase{
+            margin: 1em;
+            /* border: .5px solid var(--yellow); */
+            border-radius: 20px;
+
+            img{
+                border-radius: 15px;
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+            }
+        }
+
+        .details{
+            padding-left: 2em;
+
+            button{
+                padding: 8px 12px;
+                border-radius: 5px;
+                border: none;
+                background-color: var(--yellow);
+                font-weight: 800;
+            }
+
+            .date{
+                margin-top: .8em;
+                font: 16px;
+                font-weight: 500;
+                color: var(--grey-thick);
+            }
+
+            h1{
+                margin-top: .7em;
+                outline: none;
+            }
+
+            p{
+                margin-top: 1.7em;
+                color: var(--grey-light);
+                line-height: 160%;
+            }            
+          
+        }
+
+        .author{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1em;
+            width: 100%;
+            margin: 0 0 1em 2em;
+           
+
+            .author-name{
+                color: var(--black);
+                font-weight: 800;
+                margin-left: 12px;
+            }
+        }
+
+        
+    }
+}
+
+.course-name{
+    font-weight: 800;
+    color: var(--black);
+    font-size: 1.5rem;
+    margin-top: 2em;
+
+    &:hover{
+        color: var(--yellow);
+    }
+}
+
+.attribution{
+    margin-top: 1em;
+
+    a{
+        color: var(--black);
+        &:hover{
+            color: var(--yellow);
+        }
+    }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+
+    .details {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
