@@ -74,6 +74,11 @@ main{
                 border: none;
                 background-color: var(--yellow);
                 font-weight: 800;
+
+                 &:hover{
+                    color: var(--yellow);
+                    background-color: var(--black);
+                }
             }
 
             .date{
